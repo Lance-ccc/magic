@@ -8,7 +8,9 @@ $.log("method type" + method);
 
 if(method === 'POST'){
 
-}else{$.done()}
+}else{
+  $.done(req)
+}
 
 
 
