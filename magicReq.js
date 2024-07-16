@@ -16,8 +16,11 @@ if(method === 'POST'){
     };
     req.body = JSON.stringify(location);
     $.log("修改后的："+ req.body);
+    $.done({body:req.body});
+
+}else{
+    else{$.done()}
 }
-$.done({body:req.body});
 
 // 生成范围在 -0.001 到 0.001 之间的随机偏移量
 function getRandomOffset() {
