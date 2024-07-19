@@ -9,34 +9,7 @@ $.log("修改前：" + req.body);
 let method = req.method;
 $.log("method type" + method);
 const SECRET_KEY = 't+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=';
-//  s = i.a.SECRET_KEY + "accessKey" + i.a.ACCESS_KEY + "checkinTime" + o + "realLatitude" + (null == J ? void 0 : J.lat) + "realLocation" + r + "realLongitude" + (null == J ? void 0 : J.lng) + "status" + He.current,
-// {
-//     "deviceId": "0FE1B5D6-2985-4F69-93AC-54C0D459F7A4",
-//     "deviceName": "iPhone 13 Pro",
-//     "os": "18.0",
-//     "appVersion": "8.1.4",
-//     "appBuild": "602",
-//     "phoneName": "iPhone",
-//     "additionInfo": {
-//         "isSimulatedBySoftware": false,
-//         "isProducedByAccessory": false
-//     },
-//     "outsideType": -1,
-//     "orgLocationId": 4215,
-//     "city": "南京市",
-//     "province": "江苏省",
-//     "checkinPlaceId": 301,
-//     "realLocation": "南京雨花台区东久创新中心1号楼",
-//     "realLatitude": "31.976994710158987",
-//     "realLongitude": "118.77864766759558",
-//     "checkinTime": 1720519384126,
-//     "status": 0,
-//     "common": "",
-//     "noProjectRemark": "",
-//     "projectCode": "1BJ242819A",
-//     "accessKey": "t+6fICGM5JGlXwaxIKNZu0QXvmGYweiEj/KMdulBBRg=",
-//     "sign": "MxGqWRPzhPgUuHTI69rEzYFQcHfsZZCSRMshYYsWy7k="
-// }
+
 if(method === 'POST'){
    const body = JSON.parse(bodyStr);
    let accessKey  = body.accessKey;
