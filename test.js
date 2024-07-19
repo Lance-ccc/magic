@@ -1,6 +1,6 @@
 @import-url  https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
 
-
+ 
 // 示例字符串和密钥
 var message = "Hello, Quantumult X!";
 var key = "secret_key";
