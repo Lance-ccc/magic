@@ -3,7 +3,7 @@
 	/**
 	 * CryptoJS core components.
 	 */
-	var CryptoJS = CryptoJS || (function (Math, undefined) {
+	var CryptoJS = function (Math, undefined) {
 
 	    var crypto;
 
@@ -784,7 +784,7 @@
 	    var C_algo = C.algo = {};
 
 	    return C;
-	}(Math));
+	};
 
 const ScriptName = "magicRecord";
 const $ = new Env(ScriptName);
