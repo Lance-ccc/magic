@@ -3,7 +3,7 @@
 const ScriptName = "magicRecord";
 const $ = new Env(ScriptName);
 const req = $request;
-const body = req.body;
+const bodyStr = req.body;
 $.log("修改前：" + req.body);
 
 let method = req.method;
@@ -38,6 +38,7 @@ const SECRET_KEY = 't+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=';
 //     "sign": "MxGqWRPzhPgUuHTI69rEzYFQcHfsZZCSRMshYYsWy7k="
 // }
 if(method === 'POST'){
+   const body = JSON.parse(bodyStr);
    let accessKey  = body.accessKey;
    let checkinTime = body.checkinTime;
    let realLatitude = body.realLatitude;
