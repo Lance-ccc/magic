@@ -1,4 +1,4 @@
-	// /*globals window, global, require*/
+	// /*globals window, global, require*/ 
 
 	// /**
 	//  * CryptoJS core components.
