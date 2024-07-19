@@ -1,8 +1,9 @@
-const $ = new Env("test");
+const $ = new Env("test1");
 
 
 // 脚本执行入口
 !(async () => {
+  console.log($.isNode());
   typeof $request !== `undefined` ? await getCk() : (CryptoJS = await intCryptoJS(), await main());  // 主函数
 })()
     .catch((e) => $.messages.push(e.message || e) && $.logErr(e))
