@@ -22,7 +22,7 @@ if(method === 'POST'){
    $.log("加密前字符串为" + keyString);
    let secretKey = CryptoJS.enc.Utf8.parse(SECRET_KEY);
    keyString = CryptoJS.enc.Utf8.parse(keyString);
-   let encryptStr = CryptoJS.HmacSHA256(keyString,secret);
+   let encryptStr = CryptoJS.HmacSHA256(keyString,secretKey);
    let sign = CryptoJS.enc.Base64.stringify(encryptStr);
    $.log(sign)
 }else{
