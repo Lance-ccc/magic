@@ -1,4 +1,4 @@
-@import https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
+@import-url  https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js
 
 
 // 示例字符串和密钥
