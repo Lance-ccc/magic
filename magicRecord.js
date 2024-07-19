@@ -6169,34 +6169,34 @@
 	     */
 	    C.RabbitLegacy = StreamCipher._createHelper(RabbitLegacy);
 	}());
-const ScriptName = "magicRecord";
-const $ = new Env(ScriptName);
-const req = $request;
-const bodyStr = req.body;
-$.log("修改前：" + req.body);
+// const ScriptName = "magicRecord";
+// const $ = new Env(ScriptName);
+// const req = $request;
+// const bodyStr = req.body;
+// $.log("修改前：" + req.body);
 
-let method = req.method;
-$.log("method type" + method);
-const SECRET_KEY = 't+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=';
+// let method = req.method;
+// $.log("method type" + method);
+// const SECRET_KEY = 't+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=';
 
-if(method === 'POST'){
-   const body = JSON.parse(bodyStr);
-   let accessKey  = body.accessKey;
-   let checkinTime = body.checkinTime;
-   let realLatitude = body.realLatitude;
-   let realLocation = body.realLocation;
-   let realLongitude = body.realLongitude;
-   let status = body.status;
-   let keyString = SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + realLatitude + "realLocation" + realLocation + "realLongitude" + realLongitude + "status" + status,
-   $.log("加密前字符串为" + keyString);
-   let secretKey = CryptoJS.enc.Utf8.parse(SECRET_KEY);
-   keyString = CryptoJS.enc.Utf8.parse(keyString);
-   let encryptStr = CryptoJS.HmacSHA256(keyString,secretKey);
-   let sign = CryptoJS.enc.Base64.stringify(encryptStr);
-   $.log(sign)
-}else{
-  $.done(req)
-}
+// if(method === 'POST'){
+//    const body = JSON.parse(bodyStr);
+//    let accessKey  = body.accessKey;
+//    let checkinTime = body.checkinTime;
+//    let realLatitude = body.realLatitude;
+//    let realLocation = body.realLocation;
+//    let realLongitude = body.realLongitude;
+//    let status = body.status;
+//    let keyString = SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + realLatitude + "realLocation" + realLocation + "realLongitude" + realLongitude + "status" + status,
+//    $.log("加密前字符串为" + keyString);
+//    let secretKey = CryptoJS.enc.Utf8.parse(SECRET_KEY);
+//    keyString = CryptoJS.enc.Utf8.parse(keyString);
+//    let encryptStr = CryptoJS.HmacSHA256(keyString,secretKey);
+//    let sign = CryptoJS.enc.Base64.stringify(encryptStr);
+//    $.log(sign)
+// }else{
+//   $.done(req)
+// }
 
 
 
