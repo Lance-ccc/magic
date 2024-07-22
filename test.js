@@ -1,10 +1,13 @@
 const $ = new Env("test1");
+const request = $request;
+const SECRET_KEY = 't+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=';
 
-
+let method = request.method;
+const bodyStr = request.body;
+$.log("修改前：" + bodyStr)
 // 脚本执行入口
 !(async () => {
-  console.log($.isNode());
-  typeof $request !== `undefined` ? await getCk() : (CryptoJS = await intCryptoJS(), await main());  // 主函数
+  CryptoJS = await intCryptoJS(), await main();  // 主函数
 })()
     .catch((e) => $.messages.push(e.message || e) && $.logErr(e))
     .finally(async () => {
@@ -46,20 +49,24 @@ async function intCryptoJS() {
 }
 
 async function main() {
-  // 示例字符串和密钥
-var message = "Hello, Quantumult X!";
-var key = "secret_key";
-
-// 对字符串进行 UTF-8 编码解析
-var utf8Message = CryptoJS.enc.Utf8.parse(message);
-
-// 进行 HMAC-SHA256 哈希计算
-var hash = CryptoJS.HmacSHA256(utf8Message, key);
-
-// 将哈希结果进行 Base64 编码
-var base64Hash = CryptoJS.enc.Base64.stringify(hash);
-
-console.log(base64Hash);  // 打印结果
+  if(method === 'POST'){
+     const body = JSON.parse(bodyStr);
+     let accessKey  = body.accessKey;
+     let checkinTime = body.checkinTime;
+     let realLatitude = body.realLatitude;
+     let realLocation = body.realLocation;
+     let realLongitude = body.realLongitude;
+     let status = body.status;
+     let keyString = SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + realLatitude + "realLocation" + realLocation + "realLongitude" + realLongitude + "status" + status,
+     $.log("加密前字符串为" + keyString);
+     let secretKey = CryptoJS.enc.Utf8.parse(SECRET_KEY);
+     keyString = CryptoJS.enc.Utf8.parse(keyString);
+     let encryptStr = CryptoJS.HmacSHA256(keyString,secretKey);
+     let sign = CryptoJS.enc.Base64.stringify(encryptStr);
+     $.log(sign)
+  }else{
+    $.done(req)
+  } 
 }
 
 
