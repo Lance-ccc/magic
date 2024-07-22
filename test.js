@@ -1,6 +1,6 @@
 const $ = new Env("test1");
 const request = $request;
-const SECRET_KEY = 't+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=';
+const SECRET_KEY ="t+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=";
 
 let method = request.method;
 const bodyStr = request.body;
