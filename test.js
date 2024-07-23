@@ -1,6 +1,6 @@
 const $ = new Env("test1");
 const request = $request;
-$.log("$request：" + request);
+$.log("$request：" + JSON.stringify(request));
 
 const SECRET_KEY ="t+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=";
 
