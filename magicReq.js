@@ -10,11 +10,16 @@ if(method === 'POST'){
     let latitude = 31.976;
     let longitude = 118.778;
 
+    let newLatitude = latitude + getRandomOffset();
+    let newLongitude = longitude + getRandomOffset();
     //构建随机位置
     const location = {
-        "location": (latitude + getRandomOffset()) + "," + (longitude + getRandomOffset())
+        "location": newLatitude + "," + newLongitude
     };
     req.body = JSON.stringify(location);
+    $.setdata(newLatitude, "newRealLatitude");
+    $.setdata(newLongitude, "newRealLongitude");
+
     $.log("修改后的："+ req.body);
     $.done({body:req.body});
 
