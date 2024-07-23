@@ -17,8 +17,8 @@ if(method === 'POST'){
         "location": newLatitude + "," + newLongitude
     };
     req.body = JSON.stringify(location);
-    $.setdata(newLatitude, "newRealLatitude");
-    $.setdata(newLongitude, "newRealLongitude");
+    $.setval(newLatitude, "newRealLatitude");
+    $.setval(newLongitude, "newRealLongitude");
 
     $.log("修改后的："+ req.body);
     $.done({body:req.body});
