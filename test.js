@@ -76,8 +76,8 @@ async function main() {
        sendMsg("sign校验失败，停止签到！！");
        return;
      }
-     let newRealLatitude = $.getdata("newRealLatitude");
-     let newRealLongitude = $.getdata("newRealLongitude");
+     let newRealLatitude = $.getval("newRealLatitude");
+     let newRealLongitude = $.getval("newRealLongitude");
      if(typeof newRealLatitude === "undefined" || typeof newRealLongitude === "undefined"){
        sendMsg("获取新的经纬度失败，停止签到！！");
        return;
