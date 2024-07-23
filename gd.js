@@ -9,7 +9,6 @@ const postMethod = "POST";
 
 
 console.log($response.body);
-$.setval($response.body,'body1');
 
 $done({body: $response.body });
 
