@@ -1,5 +1,7 @@
 const $ = new Env("test1");
 const request = $request;
+$.log("$request：" + JSON.parse($request));
+
 const SECRET_KEY ="t+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=";
 
 let method = request.method;
