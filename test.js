@@ -9,7 +9,7 @@ const bodyStr = request.body;
 $.log("修改前：" + bodyStr)
 // 脚本执行入口
 !(async () => {
-  "OPTIONS" === method ? "" : (CryptoJS = await intCryptoJS(), await main());  // 主函数
+  "OPTIONS" === method ? await doOption() : (CryptoJS = await intCryptoJS(), await main());  // 主函数
 })()
     .catch((e) => $.messages.push(e.message || e) && $.logErr(e))
     .finally(async () => {
@@ -50,6 +50,10 @@ async function intCryptoJS() {
   });
 }
 
+async function doOption(){
+      $.done(request)
+}
+
 async function main() {
   if(method === 'POST'){
      const body = JSON.parse(bodyStr);
@@ -67,7 +71,7 @@ async function main() {
      let sign = CryptoJS.enc.Base64.stringify(encryptStr);
      $.log(sign)
   }else{
-    $.done(req)
+    $.done(request)
   }
 }
 
