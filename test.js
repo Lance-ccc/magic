@@ -9,7 +9,7 @@ const bodyStr = request.body;
 $.log("修改前：" + bodyStr)
 // 脚本执行入口
 !(async () => {
-  CryptoJS = await intCryptoJS(), await main();  // 主函数
+  "OPTIONS" === method ? "" : (CryptoJS = await intCryptoJS(), await main());  // 主函数
 })()
     .catch((e) => $.messages.push(e.message || e) && $.logErr(e))
     .finally(async () => {
