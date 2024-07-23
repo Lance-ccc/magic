@@ -1,27 +1,21 @@
 const $ = new Env("test1");
 const request = $request;
-$.log("$request：" + JSON.stringify(request)); 
-sendMsg("123");
-pushMsg("1234");
+
 const SECRET_KEY ="t+6fICGM5JGlXwaxIKNZu8b/5naNxXnal+g845N7SNk=";
 
 let method = request.method;
 const bodyStr = request.body;
-$.log("修改前：" + bodyStr)
 // 脚本执行入口
 !(async () => {
   "OPTIONS" === method ? await doOption() : (CryptoJS = await intCryptoJS(), await main());  // 主函数
 })()
-    .catch((e) => $.messages.push(e.message || e) && $.logErr(e))
+    .catch((e) =>  $.logErr(e))
     .finally(async () => {
       // await sendMsg($.messages.join('\n').trimStart().trimEnd());  // 推送通知
       // $.done();
     })
 
-//--------
-function pushMsg(msg) {
-  $.messages.push(msg.trimEnd()), $.log(msg.trimEnd());
-}
+
 
 //加载 crypto-js
 async function intCryptoJS() {
@@ -56,7 +50,7 @@ async function doOption(){
 }
 
 async function main() {
-  if(method === 'POST'){
+    $.log("修改前的body " + bodyStr);
      const body = JSON.parse(bodyStr);
      let accessKey  = body.accessKey;
      let checkinTime = body.checkinTime;
@@ -65,15 +59,25 @@ async function main() {
      let realLongitude = body.realLongitude;
      let status = body.status;
      let keyString = SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + realLatitude + "realLocation" + realLocation + "realLongitude" + realLongitude + "status" + status;
-     $.log("加密前字符串为" + keyString);
      let secretKey = CryptoJS.enc.Utf8.parse(SECRET_KEY);
-     keyString = CryptoJS.enc.Utf8.parse(keyString);
-     let encryptStr = CryptoJS.HmacSHA256(keyString,secretKey);
+     let utf8String = CryptoJS.enc.Utf8.parse(keyString);
+     let encryptStr = CryptoJS.HmacSHA256(utf8String,secretKey);
      let sign = CryptoJS.enc.Base64.stringify(encryptStr);
-     $.log(sign)
-  }else{
-    $.done(request)
-  }
+
+     $.log("开始校验额外参数：" + JSON.stringify(body.additionInfo));
+     if(body.additionInfo.isProducedByAccessory || body.additionInfo.isSimulatedBySoftware){
+       sendMsg("错误的参数，停止签到！！");
+       return;
+     }
+     if(sign !== body.sign){
+       sendMsg("sign校验失败，停止签到！！");
+       return;
+     }
+ 
+}
+
+function verifyParams(body){
+
 }
 
 
