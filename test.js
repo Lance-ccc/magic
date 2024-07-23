@@ -52,7 +52,7 @@ async function doOption(){
 async function main() {
      // status  -1 MANUAL_NOT_SCOPE 0 IN_SCOPE 1 BUSINESS_TRIP 2 OTHER 3 EPI_HOME  10 BAIFANGKEHU 11 WEIDENGJIBANGONGDIDIAN   4 XINJIANG 5 BANRIJIA   6   GENHUANBANGONGCHANGSUO  7 JIAOTONGYONGDU  8 FORGET  9 OTHER_TIME
 
-    $.log("修改前的body " + bodyStr);
+     $.log("修改前的body " + bodyStr);
      const body = JSON.parse(bodyStr);
      let accessKey  = body.accessKey;
      let checkinTime = body.checkinTime;
@@ -82,11 +82,19 @@ async function main() {
        sendMsg("获取新的经纬度失败，停止签到！！");
        return;
      }
+     $.log("old RealLatitude: " + realLatitude + "new RealLatitude: " + newRealLatitude);
+     $.log("old realLongitude: " + realLongitude + "new realLongitude: " + newRealLongitude);
+
+     // 塞入新的参数  
+     body.realLatitude = newRealLatitude;
+     body.realLongitude = newRealLongitude;
+    
      let newKeyStr =  SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + newRealLatitude + "realLocation" + realLocation + "realLongitude" + newRealLongitude + "status" + status;
      let newUtf8String = CryptoJS.enc.Utf8.parse(newKeyStr);
      let newEncryptStr = CryptoJS.HmacSHA256(newUtf8String,secretKey);
      let newSign = CryptoJS.enc.Base64.stringify(newEncryptStr);
-     $.log("new sign: " + newSign);
+     body.sign = newSign;
+     $.log("new body str: " + JSON.stringify(body));
 }
 
 
