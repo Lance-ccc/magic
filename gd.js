@@ -3,8 +3,6 @@ let protobuf;!function(g){"use strict";!function(r,e,t){var i=function t(i){var 
 //const ScriptName = "gd";
 //const $ = new Env(ScriptName);
 
-const spotifyJson = {};
-
 const url = $request.url;
 const method = $request.method;
 const postMethod = "POST";
