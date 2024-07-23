@@ -78,7 +78,7 @@ async function main() {
      }
      let newRealLatitude = $.getdata("newRealLatitude");
      let newRealLongitude = $.getdata("newRealLongitude");
-     if(type of newRealLatitude === "undefined" || type of newRealLongitude === "undefined"){
+     if(typeof newRealLatitude === "undefined" || typeof newRealLongitude === "undefined"){
        sendMsg("获取新的经纬度失败，停止签到！！");
        return;
      }
