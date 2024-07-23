@@ -50,6 +50,8 @@ async function doOption(){
 }
 
 async function main() {
+     // status  -1 MANUAL_NOT_SCOPE 0 IN_SCOPE 1 BUSINESS_TRIP 2 OTHER 3 EPI_HOME  10 BAIFANGKEHU 11 WEIDENGJIBANGONGDIDIAN   4 XINJIANG 5 BANRIJIA   6   GENHUANBANGONGCHANGSUO  7 JIAOTONGYONGDU  8 FORGET  9 OTHER_TIME
+
     $.log("修改前的body " + bodyStr);
      const body = JSON.parse(bodyStr);
      let accessKey  = body.accessKey;
@@ -58,9 +60,9 @@ async function main() {
      let realLocation = body.realLocation;
      let realLongitude = body.realLongitude;
      let status = body.status;
-     let keyString = SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + realLatitude + "realLocation" + realLocation + "realLongitude" + realLongitude + "status" + status;
+     let keyStr = SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + realLatitude + "realLocation" + realLocation + "realLongitude" + realLongitude + "status" + status;
      let secretKey = CryptoJS.enc.Utf8.parse(SECRET_KEY);
-     let utf8String = CryptoJS.enc.Utf8.parse(keyString);
+     let utf8String = CryptoJS.enc.Utf8.parse(keyStr);
      let encryptStr = CryptoJS.HmacSHA256(utf8String,secretKey);
      let sign = CryptoJS.enc.Base64.stringify(encryptStr);
 
@@ -69,15 +71,22 @@ async function main() {
        sendMsg("错误的参数，停止签到！！");
        return;
      }
+     $.log(111);
      if(sign !== body.sign){
        sendMsg("sign校验失败，停止签到！！");
        return;
      }
- 
-}
-
-function verifyParams(body){
-
+     let newRealLatitude = $.getdata("newRealLatitude");
+     let newRealLongitude = $.getdata("newRealLongitude");
+     if(type of newRealLatitude === "undefined" || type of newRealLongitude === "undefined"){
+       sendMsg("获取新的经纬度失败，停止签到！！");
+       return;
+     }
+     let newKeyStr =  SECRET_KEY + "accessKey" + accessKey + "checkinTime" + checkinTime + "realLatitude" + newRealLatitude + "realLocation" + realLocation + "realLongitude" + newRealLongitude + "status" + status;
+     let newUtf8String = CryptoJS.enc.Utf8.parse(newKeyStr);
+     let newEncryptStr = CryptoJS.HmacSHA256(newUtf8String,secretKey);
+     let newSign = CryptoJS.enc.Base64.stringify(newEncryptStr);
+     $.log("new sign: " + newSign);
 }
 
 
