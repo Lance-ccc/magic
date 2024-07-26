@@ -209,6 +209,7 @@ var str = `
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
             alert(r.useState);
+            alert(J);
             Object(r.useEffect)((function () {
                 W(ct());
                 var e = Object(M.setInterval)((function () {
@@ -1029,6 +1030,9 @@ var str = `
         }(u || (u = {}))
     }
 }]);
+
+
+
 `;
 
 $done({body : str});
