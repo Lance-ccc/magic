@@ -191,8 +191,11 @@ var str = `
         function getRandomOffset() {
             return (Math.random() - 0.1) / 500;
         }
-        var lat = 33.976 + getRandomOffset();
-        var lng = 128.778 + getRandomOffset();
+
+    //         let latitude = 31.976;
+    // let longitude = 118.778;
+        var lat = 31.976 + getRandomOffset();
+        var lng = 118.778 + getRandomOffset();
 
         
         t.default = function () {
