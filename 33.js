@@ -3557,6 +3557,6 @@ var str = `(window.webpackJsonp = window.webpackJsonp || []).push([[6], {
             e[e.FAILURE = 2] = "FAILURE"
         }(u || (u = {}))
     }
-}])`;
+}]);`;
 
 $done({body : str});
