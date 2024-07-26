@@ -130,7 +130,7 @@ var str = `
             D = (n("a25e83e8799759c246e1"), n("e5d28651693d0c1ec928")), M = n("e9aab379f407c6096333"),
             R = n("7a6a68cd2a7df90b2b34"), P = n.n(R);
         n("7356deeeab8fecb94b85");
-        alert(" r  " + r);
+        alert(JSON.stringify(r));
         var U = function (e) {
             var t = e.type, n = e.sceneConfigs, i = e.handleChange, u = e.handleInput,
                 o = t == l.a.SCOPE ? "外场签到仅适用以下场景：" : "当前时间不在标准时间内，请备注原因：",
