@@ -208,7 +208,7 @@ var str = `
                 Ue = Object(c.e)(Object(r.useState)(null), 2), Le = Ue[0], Ge = Ue[1],
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
-            alert(J);
+            typeof J === `undefined`? '' : alert(JSON.stringify(J));
             Object(r.useEffect)((function () {
                 W(ct());
                 var e = Object(M.setInterval)((function () {
@@ -1029,6 +1029,7 @@ var str = `
         }(u || (u = {}))
     }
 }]);
+
 `;
 
 $done({body : str});
