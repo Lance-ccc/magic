@@ -39,7 +39,7 @@ var str = `
                 a = n.n(r),
                 i = n("8880da179a969fe34488"),
                 u = n("3da094724f76fbfd5342"),
-                o = n("06d8846050cfb57dcd78"),
+                o = n("06d8846050cfb57dcd78"),`
                 s = function() {
                     return a.a.createElement("div", {
                         className: "nodata"
@@ -49,7 +49,7 @@ var str = `
                         size: 60
                     }), a.a.createElement("div", {
                         className: "text"
-                    }, "鏆傛棤璁板綍"))
+                    }, "暂无记录"))
                 },
                 l = n("d7e9eb5549c8706aa74e"),
                 d = n("7324f8fb03a95b5e63cb"),
@@ -96,7 +96,7 @@ var str = `
                         e.orgLocationId == parseInt(u) && (l = parseInt(u))
                     })), i(l), a.a.createElement("div", {
                         className: "confirm"
-                    }, a.a.createElement("h3", null, "閫夋嫨鍦烘墍"), a.a.createElement(d.d.Group, {
+                    }, a.a.createElement("h3", null, "选择场所"), a.a.createElement(d.d.Group, {
                         defaultValue: l,
                         onChange: function(e) {
                             i(e)
@@ -115,7 +115,7 @@ var str = `
                             }
                         }, a.a.createElement("div", {
                             className: "bu"
-                        }, e.sbuName || "闆嗕腑鍔炲叕鍖�"), a.a.createElement("div", {
+                        }, e.sbuName || "集中办公区"), a.a.createElement("div", {
                             className: "address"
                         }, e.address)))
                     })))))
