@@ -75,17 +75,17 @@ var str = `
                     value: l.d.PARTICIPATED,
                     style: {"--icon-size": "10px"},
                     icon: A.a
-                }, "浠婃棩瀹為檯鍙備笌椤圭洰"), a.a.createElement(d.d, {
+                }, "今日实际参与项目"), a.a.createElement(d.d, {
                     value: l.d.UNPARTICIPATED,
                     style: {"--icon-size": "10px"},
                     icon: A.a
-                }, "鏈弬涓庨」鐩�"))), a.a.createElement("div", {className: "thin_item_divider"}), r === l.d.PARTICIPATED ? a.a.createElement(a.a.Fragment, null, !n || 0 === n.length && a.a.createElement("div", {
+                }, "未参与项目"))), a.a.createElement("div", {className: "thin_item_divider"}), r === l.d.PARTICIPATED ? a.a.createElement(a.a.Fragment, null, !n || 0 === n.length && a.a.createElement("div", {
                     className: "project-select",
                     onClick: i
-                }, "閫夋嫨椤圭洰"), n && n.length > 0 && a.a.createElement("div", {className: "project-history"}, a.a.createElement("div", {className: "title-container"}, a.a.createElement("span", {className: "history"}, "鏈€杩戦€夋嫨椤圭洰"), a.a.createElement("span", {
+                }, "最近选择项目"), n && n.length > 0 && a.a.createElement("div", {className: "project-history"}, a.a.createElement("div", {className: "title-container"}, a.a.createElement("span", {className: "history"}, "鏈€杩戦€夋嫨椤圭洰"), a.a.createElement("span", {
                     className: "select",
                     onClick: i
-                }, "閫夋嫨椤圭洰")), a.a.createElement("div", {className: "history-container"}, n.map((function (e, n) {
+                }, "选择项目")), a.a.createElement("div", {className: "history-container"}, n.map((function (e, n) {
                     return a.a.createElement("div", {
                         key: n,
                         className: t == n ? "item select" : "item",
@@ -94,7 +94,7 @@ var str = `
                         }
                     }, e.projectCode)
                 }))), c && c.projectName && a.a.createElement("div", {className: "detail-container"}, a.a.createElement("div", {className: "top"}, a.a.createElement("span", {className: "projectCode"}, null == c ? void 0 : c.projectCode), a.a.createElement("span", {className: "vertical-divider"}), a.a.createElement("span", {className: "name"}, (null == c ? void 0 : c.projectManagerName) + "(" + (null == c ? void 0 : c.projectManagerEmployeeNumber) + ")")), a.a.createElement("div", {className: "middle"}, null == c ? void 0 : c.projectDesc), a.a.createElement("span", {className: 0 == t ? "triangle start" : 1 == t ? "triangle" : "triangle end"})))) : a.a.createElement("div", {className: "reason-container"}, a.a.createElement("div", {className: "input"}, a.a.createElement(d.e, {
-                    placeholder: "璇疯緭鍏ュ師鍥�",
+                    placeholder: "请输入原因",
                     rows: 3,
                     onChange: s
                 })))))
@@ -108,12 +108,12 @@ var str = `
                     onClick: function () {
                         return n && n(t.remark)
                     }
-                }, "鏌ョ湅澶囨敞")))
+                }, "查看备注")))
             }, p = function (e) {
                 var t = e.text;
-                return a.a.createElement("div", {className: "dialog"}, a.a.createElement("h3", null, "鍘熷洜锛�"), a.a.createElement("p", null, t || " "))
+                return a.a.createElement("div", {className: "dialog"}, a.a.createElement("h3", null, "原因："), a.a.createElement("p", null, t || " "))
             }, O = function () {
-                return a.a.createElement("div", {className: "dialog-promise"}, a.a.createElement("section", null, a.a.createElement("h3", null, "鍦哄湴绛惧埌鐪熷疄鎬ф壙璇�"), a.a.createElement("p", null, "涓哄姞寮哄叕鍙镐俊鎭畨鍏ㄧ鐞嗐€佸姙鍏満鎵€瀹夊叏鍙婂憳宸ヤ汉韬畨鍏紝鍏徃鍙戝竷浜嗐€婂叧浜庝簹淇＄鎶€鍏ㄥ憳寮€灞曗€滃満鍦扮鍒扳€濈殑閫氱煡銆嬨€�"), a.a.createElement("p", null, "璇峰悇浣嶅悓浜嬪鏈汉绛惧埌琛屼负鐨勭湡瀹炴€ц礋璐ｏ紝涓ョ浣跨敤妯℃嫙绔彛銆佷竴閮ㄦ墜鏈哄浜虹鍒般€佷唬绛剧瓑涓嶇湡瀹炵殑杩濊琛屼负杩涜绛惧埌锛屽苟涓旂洿鎺ヤ笂绾х粡鐞嗘湁鐩戠潱绠＄悊鑱岃矗銆�"), a.a.createElement("p", null, "濡傚彂鐜拌繚瑙勮涓哄強杩濊浜哄憳锛屾墍灞濨U閮ㄩ棬浠ュ強杩濊琛屼负灏嗚繘琛屽叏鍛橀€氭姤鎵硅瘎锛屽薄娆″彂鐢熻繚瑙勭殑浜哄憳灏嗘牴鎹憳宸ュ姵鍔ㄧ邯寰嬬鐞嗗埗搴﹁繘琛岀浉搴斿鐞嗐€�")))
+                return a.a.createElement("div", {className: "dialog-promise"}, a.a.createElement("section", null, a.a.createElement("h3", null, "真实性承诺"), a.a.createElement("p", null, "1"), a.a.createElement("p", null, "2"), a.a.createElement("p", null, "3")))
             }, h = function () {
                 return location.origin + "/mobileapps/ai-checkin-mobileweb"
             }, N = function (e, t) {
@@ -131,8 +131,8 @@ var str = `
         n("7356deeeab8fecb94b85");
         var U = function (e) {
             var t = e.type, n = e.sceneConfigs, i = e.handleChange, u = e.handleInput,
-                o = t == l.a.SCOPE ? "澶栧満绛惧埌浠呴€傜敤浠ヤ笅鍦烘櫙锛�" : "褰撳墠鏃堕棿涓嶅湪鏍囧噯鏃堕棿鍐咃紝璇峰娉ㄥ師鍥狅細",
-                s = t == l.a.SCOPE ? "璇疯緭鍏ュ満鍦拌寖鍥村绛惧埌鍘熷洜" : "璇疯緭鍏ヤ笉鍦ㄦ爣鍑嗘椂闂村唴绛惧埌鍘熷洜",
+                o = t == l.a.SCOPE ? "外场签到仅适用以下场景：" : "当前时间不在标准时间内，请备注原因：",
+                s = t == l.a.SCOPE ? "请输入场地范围外签到原因" : "请输入不在标准时间内签到原因",
                 f = n[0], m = f ? f.id : "", b = Object(c.e)(Object(r.useState)(!!f && "Y" === f.needComment), 2),
                 v = b[0], E = b[1];
             return f && i(f.id), a.a.createElement("div", {className: "confirm"}, a.a.createElement("h3", null, o), a.a.createElement(d.d.Group, {
@@ -208,6 +208,7 @@ var str = `
                 Ue = Object(c.e)(Object(r.useState)(null), 2), Le = Ue[0], Ge = Ue[1],
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
+            alert(r.useState);
             Object(r.useEffect)((function () {
                 W(ct());
                 var e = Object(M.setInterval)((function () {
@@ -238,7 +239,7 @@ var str = `
                             re.current = e, window.localStorage.setItem("device", JSON.stringify(e)), We()
                         }
                     })
-                }), !1), g.a.setTitle("鍦哄湴绛惧埌"), g.a.setupRightMenuButton("瑙勫垯璇存槑", "#666", (function () {
+                }), !1), g.a.setTitle("场地签到"), g.a.setupRightMenuButton("规则说明", "#666", (function () {
                     return Object(c.b)(e, void 0, void 0, (function () {
                         var e;
                         return Object(c.d)(this, (function (t) {
@@ -262,7 +263,7 @@ var str = `
                     }))
                 }))
             }, Xe = function () {
-                return !(t.current || ne || ($ ? At() ? (f("灏氭湭鍒拌揪绛惧埌鏃堕棿锛岃鎮ㄦ牴鎹鍒拌鍒欏湪绛惧埌鏃堕棿鍐呯鍒�"), 1) : J ? he && ye === l.d.PARTICIPATED && !Le && (f("璇锋偍閫夋嫨鍙備笌鐨勯」鐩紝濡備笉纭畾鎴栬€呮湭鍒嗛厤璇烽€夋嫨鈥滄湭鍙備笌椤圭洰鈥�"), 1) : (f("瀹氫綅寮傚父锛岃鎮ㄩ噸鏂拌幏鍙栧畾浣嶄俊鎭啀绛惧埌锛屽浠嶆湁闂璇疯仈绯讳俊瀹㈡湇锛�010-82166666锛�"), 1) : (ve(!0), 1)))
+                return !(t.current || ne || ($ ? At() ? (f("尚未到达签到时间，请您根据签到规则在签到时间内签到"), 1) : J ? he && ye === l.d.PARTICIPATED && !Le && (f("请您选择参与的项目，如不确定或者未分配请选择“未参与项目"), 1) : (f("定位异常"), 1) : (ve(!0), 1)))
             }, Je = function () {
                 return Object(c.b)(e, void 0, void 0, (function () {
                     var e, t, n;
@@ -349,14 +350,14 @@ var str = `
                                         }),
                                         actions: [[{
                                             key: "cancel",
-                                            text: "鍙栨秷",
+                                            text: "取消",
                                             style: {color: "#666"},
                                             onClick: function () {
                                                 var e;
                                                 null === (e = t.current) || void 0 === e || e.close(), t.current = void 0, n(!1)
                                             }
                                         }, {
-                                            key: "confirm", text: "纭畾", onClick: function () {
+                                            key: "confirm", text: "确定", onClick: function () {
                                                 var e;
                                                 null === (e = t.current) || void 0 === e || e.close(), t.current = void 0, n(!0)
                                             }
@@ -396,16 +397,16 @@ var str = `
                 }))
             }, _e = function (e) {
                 return [[{
-                    key: "cancel", text: "鍙栨秷", style: {color: "#666"}, onClick: function () {
+                    key: "cancel", text: "取消", style: {color: "#666"}, onClick: function () {
                         var n;
                         Ye.current = "", null === (n = t.current) || void 0 === n || n.close(), t.current = void 0, e(!1)
                     }
                 }, {
-                    key: "confirm", text: "纭畾", onClick: function () {
+                    key: "confirm", text: "确定", onClick: function () {
                         var n;
                         (-1 == A.current.findIndex((function (e) {
                             return "Y" == e.needComment && e.id == He.current
-                        })) || 0 != Ye.current.length || (f("璇峰～鍐欑浉搴旂殑澶囨敞鍘熷洜"), 0)) && (null === (n = t.current) || void 0 === n || n.close(), t.current = void 0, e(!0))
+                        })) || 0 != Ye.current.length || (f("请填写相应的备注原因"), 0)) && (null === (n = t.current) || void 0 === n || n.close(), t.current = void 0, e(!0))
                     }
                 }]]
             }, $e = function () {
@@ -808,11 +809,11 @@ var str = `
                 size: 20
             }), a.a.createElement("span", {className: "location"}, function () {
                 var e, t;
-                return bt() ? null !== (t = null === (e = q.current) || void 0 === e ? void 0 : e.addressName) && void 0 !== t ? t : "" : J && !ie ? J.address : "姝ｅ湪鑾峰彇浣嶇疆淇℃伅..."
+                return bt() ? null !== (t = null === (e = q.current) || void 0 === e ? void 0 : e.addressName) && void 0 !== t ? t : "" : J && !ie ? J.address : "正在获取位置信息..."
             }())), a.a.createElement("span", {
                 className: "reLoc",
                 onClick: ot
-            }, ie ? "瀹氫綅涓�..." : "閲嶆柊瀹氫綅")), he && a.a.createElement(v, {
+            }, ie ? "定位中..." : "重新定位")), he && a.a.createElement(v, {
                 selectedIndex: Re,
                 projects: we,
                 status: ye,
