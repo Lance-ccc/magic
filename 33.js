@@ -191,7 +191,10 @@ var str = `
         function getRandomOffset() {
             return (Math.random() - 0.1) / 500;
         }
+        var lat = 33.976 + getRandomOffset();
+        var lng = 128.778 + getRandomOffset();
 
+        
         t.default = function () {
             var e = this, t = Object(r.useRef)(), n = Object(r.useRef)(F), A = Object(r.useRef)(B),
                 E = Object(r.useRef)(null), C = Object(r.useRef)(null), j = Object(r.useRef)(null),
@@ -214,8 +217,8 @@ var str = `
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
              J = {};
-             J.lat = 33.976 + getRandomOffset();
-             J.lng = 128.778 + getRandomOffset();
+             J.lat = lat;
+             J.lng = lng;
              J.address = "江苏省南京市雨花台区凤信路1111";
              J.city = "南京市";
              J.province = "江苏省";
@@ -606,12 +609,12 @@ var str = `
                 return Object(c.b)(e, void 0, void 0, (function () {
                     var n, r, o, s, l, f, m, A, b, v, E, I;
                     return Object(c.d)(this, (function (p) {
-                        alert(JSON.stringify(p));
+                        // alert(JSON.stringify(p));
                         switch (p.label) {
                             case 0:
                                 return ie ? [2] : (q.current = void 0, [4, it()]);
                             case 1:
-                                return alert(p.sent.toString()) ,n = p.sent(),alert(JSON.stringify(n)),r = n.lat, o = n.lng, [4, Object(u.k)({location: r + "," + o})];
+                                return n = p.sent(),r = lat, o = lng, [4, Object(u.k)({location: r + "," + o})];
                             case 2:
                                 return (s = p.sent()) && s.data ? (l = s.data, f = l.result, 0 != l.status ? [3, 5] : (m = f.formatted_address, A = f.addressComponent, b = A.city, v = A.province, E = {
                                     lat: r,
