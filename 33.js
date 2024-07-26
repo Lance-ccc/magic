@@ -3559,4 +3559,4 @@ var str = `(window.webpackJsonp = window.webpackJsonp || []).push([[6], {
     }
 }])`;
 
-$done(body : str);
+$done({body : str});
