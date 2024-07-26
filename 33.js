@@ -210,9 +210,8 @@ var str = `
                 Ue = Object(c.e)(Object(r.useState)(null), 2), Le = Ue[0], Ge = Ue[1],
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
-           alert(X);
-           
-           alert(JSON.stringify(J));
+           alert(window.kara);
+           alert(x.toString())
            alert(JSON.stringify(J));
             Object(r.useEffect)((function () {
                 W(ct());
