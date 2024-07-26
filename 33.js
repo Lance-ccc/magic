@@ -210,7 +210,6 @@ var str = `
                 Ue = Object(c.e)(Object(r.useState)(null), 2), Le = Ue[0], Ge = Ue[1],
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
-           alert(JSON.stringify(window.kara));
            alert(JSON.stringify(J));
             Object(r.useEffect)((function () {
                 W(ct());
@@ -545,7 +544,7 @@ var str = `
                     return Object(c.d)(this, (function (t) {
                         return [2, new Promise((function (t, n) {
                             ue(e);
-                            alert(window.kara);
+                            alert(JSON.stringify(window.kara));
                             var c = window.kara;
                             if (c) {
                                 var r = function () {
