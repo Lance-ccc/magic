@@ -13,7 +13,7 @@ var str = `
         o.defaultProps = {
             prefixCls: "ai-icon", onClick: function () {
             }
-        };
+        }; 
         var s = o;
         t.a = s
     }, "1f54dddadd867e24c69b": function (e, t, n) {
