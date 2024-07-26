@@ -219,7 +219,6 @@ var str = `
              J.address = "江苏省南京市雨花台区凤信路1111";
              J.city = "南京市";
              J.province = "江苏省";
-             alert(JSON.stringify(J));
             Object(r.useEffect)((function () {
                 W(ct());
                 var e = Object(M.setInterval)((function () {
@@ -606,12 +605,13 @@ var str = `
             }, ot = function () {
                 return Object(c.b)(e, void 0, void 0, (function () {
                     var n, r, o, s, l, f, m, A, b, v, E, I;
+                    alert(JSON.stringify(n))
                     return Object(c.d)(this, (function (p) {
                         switch (p.label) {
                             case 0:
                                 return ie ? [2] : (q.current = void 0, [4, it()]);
                             case 1:
-                                return n = p.sent(), r = n.lat, o = n.lng, [4, Object(u.k)({location: r + "," + o})];
+                                return n = p.sent(),r = n.lat, o = n.lng, [4, Object(u.k)({location: r + "," + o})];
                             case 2:
                                 return (s = p.sent()) && s.data ? (l = s.data, f = l.result, 0 != l.status ? [3, 5] : (m = f.formatted_address, A = f.addressComponent, b = A.city, v = A.province, E = {
                                     lat: r,
