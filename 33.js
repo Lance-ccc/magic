@@ -130,7 +130,7 @@ var str = `
             D = (n("a25e83e8799759c246e1"), n("e5d28651693d0c1ec928")), M = n("e9aab379f407c6096333"),
             R = n("7a6a68cd2a7df90b2b34"), P = n.n(R);
         n("7356deeeab8fecb94b85");
-        alert(JSON.stringify(r));
+        alert(JSON.stringify(r) + c);
         var U = function (e) {
             var t = e.type, n = e.sceneConfigs, i = e.handleChange, u = e.handleInput,
                 o = t == l.a.SCOPE ? "外场签到仅适用以下场景：" : "当前时间不在标准时间内，请备注原因：",
@@ -210,8 +210,8 @@ var str = `
                 Ue = Object(c.e)(Object(r.useState)(null), 2), Le = Ue[0], Ge = Ue[1],
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
-           alert(X); 
-           alert(r); 
+           alert(X);
+           
            alert(JSON.stringify(J));
            alert(JSON.stringify(J));
             Object(r.useEffect)((function () {
