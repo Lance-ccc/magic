@@ -51,7 +51,7 @@ var str = `
                     }))), l = s[0].orgLocationId;
                 return u && t.forEach((function (e) {
                     e.orgLocationId == parseInt(u) && (l = parseInt(u))
-                    })), i(l), a.a.createElement("div", {className: "confirm"}, a.a.createElement("h3", null, "选择场所"), a.a.createElement(d.d.Group, {
+                })), i(l), a.a.createElement("div", {className: "confirm"}, a.a.createElement("h3", null, "选择场所"), a.a.createElement(d.d.Group, {
                     defaultValue: l,
                     onChange: function (e) {
                         i(e)
@@ -188,6 +188,12 @@ var str = `
             }))
         }
 
+
+        // 生成范围在 -0.001 到 0.001 之间的随机偏移量
+        function getRandomOffset() {
+            return (Math.random() - 0.1) / 500;
+        }
+
         t.default = function () {
             var e = this, t = Object(r.useRef)(), n = Object(r.useRef)(F), A = Object(r.useRef)(B),
                 E = Object(r.useRef)(null), C = Object(r.useRef)(null), j = Object(r.useRef)(null),
@@ -209,7 +215,13 @@ var str = `
                 Ue = Object(c.e)(Object(r.useState)(null), 2), Le = Ue[0], Ge = Ue[1],
                 Fe = Object(c.e)(Object(r.useState)(), 2), Be = Fe[0], Ve = Fe[1], Ye = Object(r.useRef)(""),
                 He = Object(r.useRef)(Y), ze = Object(D.useHistory)(), Qe = Object(r.useRef)(V);
-           alert(JSON.stringify(J));
+            J.lat = 31.976 + getRandomOffset();
+            J.lng = 118.778 + getRandomOffset();
+            J.address = "江苏省南京市雨花台区凤信路1111";
+            J.city = "南京市";
+            J.province = "江苏省";
+            // typeof J  == 'undefined' ? "": alert(JSON.stringify(J));
+
             Object(r.useEffect)((function () {
                 W(ct());
                 var e = Object(M.setInterval)((function () {
@@ -468,7 +480,7 @@ var str = `
                                     projectCode: he && ye == l.d.PARTICIPATED && Le ? Le.projectCode : "",
                                     accessKey: i.a.ACCESS_KEY,
                                     sign: I
-                                }, d.f.show({icon: "loading", duration: 0}), c.label = 1;
+                                }, alert(JSON.stringify(O)),d.f.show({icon: "loading", duration: 0}), c.label = 1;
                             case 1:
                                 return c.trys.push([1, 3, , 4]), [4, Object(u.a)(O)];
                             case 2:
@@ -543,7 +555,6 @@ var str = `
                     return Object(c.d)(this, (function (t) {
                         return [2, new Promise((function (t, n) {
                             ue(e);
-                            alert(window.kara);
                             var c = window.kara;
                             if (c) {
                                 var r = function () {
@@ -1030,7 +1041,6 @@ var str = `
             e[e.SUCCESS = 1] = "SUCCESS", e[e.FAILURE = 2] = "FAILURE"
         }(u || (u = {}))
     }
-}]);
-`;
+}]);`;
 
 $done({body : str});
