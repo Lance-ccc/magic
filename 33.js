@@ -606,7 +606,7 @@ var str = `
                 return Object(c.b)(e, void 0, void 0, (function () {
                     var n, r, o, s, l, f, m, A, b, v, E, I;
                     return Object(c.d)(this, (function (p) {
-                        alert(JSON.stringify(p);
+                        alert(JSON.stringify(p));
                         switch (p.label) {
                             case 0:
                                 return ie ? [2] : (q.current = void 0, [4, it()]);
