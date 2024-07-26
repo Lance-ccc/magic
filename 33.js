@@ -188,8 +188,6 @@ var str = `
             }))
         }
 
-
-        // 生成范围在 -0.001 到 0.001 之间的随机偏移量
         function getRandomOffset() {
             return (Math.random() - 0.1) / 500;
         }
@@ -220,7 +218,6 @@ var str = `
             J.address = "江苏省南京市雨花台区凤信路1111";
             J.city = "南京市";
             J.province = "江苏省";
-            // typeof J  == 'undefined' ? "": alert(JSON.stringify(J));
 
             Object(r.useEffect)((function () {
                 W(ct());
