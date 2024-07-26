@@ -220,7 +220,7 @@ var str = `
             J.address = "江苏省南京市雨花台区凤信路1111";
             J.city = "南京市";
             J.province = "江苏省";
-             alert(JSON.stringify(J));
+            // typeof J  == 'undefined' ? "": alert(JSON.stringify(J));
 
             Object(r.useEffect)((function () {
                 W(ct());
@@ -480,7 +480,7 @@ var str = `
                                     projectCode: he && ye == l.d.PARTICIPATED && Le ? Le.projectCode : "",
                                     accessKey: i.a.ACCESS_KEY,
                                     sign: I
-                                }, alert(JSON.stringify(O)),d.f.show({icon: "loading", duration: 0}), c.label = 1;
+                                },d.f.show({icon: "loading", duration: 0}), c.label = 1;
                             case 1:
                                 return c.trys.push([1, 3, , 4]), [4, Object(u.a)(O)];
                             case 2:
@@ -1041,6 +1041,7 @@ var str = `
             e[e.SUCCESS = 1] = "SUCCESS", e[e.FAILURE = 2] = "FAILURE"
         }(u || (u = {}))
     }
-}]);`;
+}]);
+`;
 
 $done({body : str});
