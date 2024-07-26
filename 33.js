@@ -980,6 +980,7 @@ var str = `
         }, o = function () {
             return Object(c.a)(a.a.HINT_MESSAGE).jsonHeader().get()
         }, s = function (e) {
+                    alert(JSON.stringify(e));
             return Object(c.a)(a.a.OFFICE_LIST).params(e).jsonHeader().get()
         }, l = function (e) {
             return Object(c.a)(a.a.REGEO).body(e).jsonHeader().post()
