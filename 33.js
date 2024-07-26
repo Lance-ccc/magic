@@ -556,10 +556,10 @@ var str = `
                                         appId: "dnc-checkin",
                                         success: function (e) {
                                             var n = {lng: 0, lat: 0};
-                                            n.lng = e.longitude, n.lat = e.latitude, e.sourceInfo && (Z.current ? Z.current = Object.assign(Z.current, e.sourceInfo) : Z.current = e.sourceInfo), e.sourceInfo && e.sourceInfo.isProducedByAccessory ? (alert("鎮ㄧ殑鎵嬫満宸茶繛鎺ュ鎺ヨ澶囷紙渚嬪CarPlay绛夛級锛岃绉婚櫎璁惧鎴栨柇寮€杩炴帴鍚庨噸鏂扮鍒般€俓n璇锋敞鎰忥細澶栨帴璁惧绉婚櫎鍚庯紝鏈変竴瀹氭椂闂寸殑缂撳瓨鏈燂紙1鍒嗛挓鎴栬€呮洿闀匡級锛屽彲绋嶅悗鍐嶅皾璇曠鍒般€�"), c.closePage()) : t(n)
+                                            n.lng = e.longitude, n.lat = e.latitude, e.sourceInfo && (Z.current ? Z.current = Object.assign(Z.current, e.sourceInfo) : Z.current = e.sourceInfo), e.sourceInfo && e.sourceInfo.isProducedByAccessory ? (alert("carplay no support"), c.closePage()) : t(n)
                                         },
                                         fail: function () {
-                                            alert("闇€瑕佽幏鍙栨偍鐨勪綅缃俊鎭�"), c.closePage()
+                                            alert("需要获取您的位置信息"), c.closePage()
                                         }
                                     })
                                 };
@@ -568,7 +568,7 @@ var str = `
                                         e()
                                     }), (function (e) {
                                         var t;
-                                        alert("闇€瑕佽幏鍙栨偍鐨勪綅缃俊鎭�"), null === (t = window.kara) || void 0 === t || t.closePage()
+                                        alert("需要获取您的位置信息"), null === (t = window.kara) || void 0 === t || t.closePage()
                                     }), {timeout: 5e3})
                                 }((function () {
                                     r()
@@ -619,10 +619,10 @@ var str = `
                                                 case 1:
                                                     return e = c.sent(), o = e.resultCode, s = e.data, "000000" === o && 0 == s ? [2, new Promise((function (e) {
                                                         t.current = d.b.show({
-                                                            content: a.a.createElement("div", {className: "tripHint"}, a.a.createElement("div", null, "褰撳墠鍦ㄩ潪宸ヤ綔鍦板煄甯傦紝鑻ユ偍姝ｅ湪鍑哄樊锛岃鍏堟彁浜ゅ嚭宸敵璇峰苟瀹℃壒閫氳繃鍚庡啀绛惧埌銆�"), a.a.createElement("div", null, "鑻ラ潪鍑哄樊鎯呭喌锛岃缁х画澶栧満绛惧埌骞惰鏄庡師鍥犮€�")),
+                                                            content: a.a.createElement("div", {className: "tripHint"}, a.a.createElement("div", null, "当前在非工作地城市"), a.a.createElement("div", null, "若非出差情况，请继续外场签到并说明原因")),
                                                             actions: [[{
                                                                 key: "goOn",
-                                                                text: "缁х画绛惧埌",
+                                                                text: "继续签到",
                                                                 style: {color: "#666"},
                                                                 onClick: function () {
                                                                     var n;
@@ -630,7 +630,7 @@ var str = `
                                                                 }
                                                             }, {
                                                                 key: "jumpTrip",
-                                                                text: "宸梾鐢宠",
+                                                                text: "跳转差旅",
                                                                 onClick: function () {
                                                                     var e = i.a.TRIP_URL;
                                                                     g.a.openURL({url: e})
@@ -1030,9 +1030,6 @@ var str = `
         }(u || (u = {}))
     }
 }]);
-
-
-
 `;
 
 $done({body : str});
