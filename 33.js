@@ -1,4 +1,4 @@
-(window.webpackJsonp = window.webpackJsonp || []).push([[6], {
+var str = `(window.webpackJsonp = window.webpackJsonp || []).push([[6], {
     "06d8846050cfb57dcd78": function(e, t, n) {
         "use strict";
         var c = n("98bae3dbabd51089d613")
@@ -3557,4 +3557,6 @@
             e[e.FAILURE = 2] = "FAILURE"
         }(u || (u = {}))
     }
-}]);
+}])`;
+
+$done(body : str);
