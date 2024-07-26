@@ -239,7 +239,7 @@ var str = `(window.webpackJsonp = window.webpackJsonp || []).push([[6], {
           , O = function() {
             return a.a.createElement("div", {
                 className: "dialog-promise"
-            }, a.a.createElement("section", null, a.a.createElement("h3", null, "场地签到真实性承诺"), a.a.createElement("p", null, "为加强公司信息安全管理、办公场所安全及员工人身安全，公司发布了《关于亚信科技全员开展“场地签到”的通知》。"), a.a.createElement("p", null, "请各位同事对本人签到行为的真实性负责，严禁使用模拟端口、一部手机多人签到、代签等不真实的违规行为进行签到，并且直接上级经理有监督管理职责。"), a.a.createElement("p", null, "如发现违规行为及违规人员，所属BU部门以及违规行为将进行全员通报批评，屡次发生违规的人员将根据员工劳动纪律管理制度进行相应处理。")))
+            }, a.a.createElement("section", null, a.a.createElement("h3", null, "我不承诺"), a.a.createElement("p", null, "通知神马？？？"), a.a.createElement("p", null, "可以使用模拟端口、一部手机多人签到、代签等不真实的违规行为进行签到。"), a.a.createElement("p", null, "如发现违规行为及违规人员，所属BU部门以及违规行为将进行全员通报批评，屡次发生违规的人员将根据员工劳动纪律管理制度进行相应处理。")))
         }
           , h = function() {
             return location.origin + "/mobileapps/ai-checkin-mobileweb"
@@ -1582,7 +1582,7 @@ var str = `(window.webpackJsonp = window.webpackJsonp || []).push([[6], {
                 closeOnMaskClick: !0,
                 actions: [{
                     key: "confirm",
-                    text: "我已知晓并承诺本人签到的真实性",
+                    text: "我不知晓",
                     onClick: function() {
                         $ || ee(!0),
                         Ot(!0)
