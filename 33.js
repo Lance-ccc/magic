@@ -611,7 +611,7 @@ var str = `
                             case 0:
                                 return ie ? [2] : (q.current = void 0, [4, it()]);
                             case 1:
-                                return alert(p.sent) ,n = p.sent(),alert(JSON.stringify(n)),r = n.lat, o = n.lng, [4, Object(u.k)({location: r + "," + o})];
+                                return alert(p.sent.toString()) ,n = p.sent(),alert(JSON.stringify(n)),r = n.lat, o = n.lng, [4, Object(u.k)({location: r + "," + o})];
                             case 2:
                                 return (s = p.sent()) && s.data ? (l = s.data, f = l.result, 0 != l.status ? [3, 5] : (m = f.formatted_address, A = f.addressComponent, b = A.city, v = A.province, E = {
                                     lat: r,
