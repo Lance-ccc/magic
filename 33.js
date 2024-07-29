@@ -83,7 +83,7 @@ var str = `
                 }, "未参与项目"))), a.a.createElement("div", {className: "thin_item_divider"}), r === l.d.PARTICIPATED ? a.a.createElement(a.a.Fragment, null, !n || 0 === n.length && a.a.createElement("div", {
                     className: "project-select",
                     onClick: i
-                }, "最近选择项目"), n && n.length > 0 && a.a.createElement("div", {className: "project-history"}, a.a.createElement("div", {className: "title-container"}, a.a.createElement("span", {className: "history"}, "鏈€杩戦€夋嫨椤圭洰"), a.a.createElement("span", {
+                }, "选择项目"), n && n.length > 0 && a.a.createElement("div", {className: "project-history"}, a.a.createElement("div", {className: "title-container"}, a.a.createElement("span", {className: "history"}, "最近选择项目"), a.a.createElement("span", {
                     className: "select",
                     onClick: i
                 }, "选择项目")), a.a.createElement("div", {className: "history-container"}, n.map((function (e, n) {
