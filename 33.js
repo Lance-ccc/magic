@@ -887,7 +887,7 @@ var str = `
                 onClick: N(Je, 500)
             }, a.a.createElement("span", {className: "sign"}, At() ? "非签到时间" : bt() ? "场地签到" : "外场签到"), At() && a.a.createElement("div", {className: "clock"}, n.current.startTime.substring(0, 5), "~", n.current.endTime.substring(0, 5))), a.a.createElement("div", {className: "status-container"}, function () {
                 var e, t, n = "", c = null;
-                return At() ? n = "不在签到时间，无法签到" : ie ? n = "正在获取数据..." : bt() ? n = "已在签到区域，可签到" : (n = "不在签到区域，只能外场签到", c = "重新定位"), a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {className: "location-status"}, a.a.createElement("span", {className: "status"}, n), c && a.a.createElement("span", {
+                return At() ? n = "不在签到时间，无法签到" : ie ? n = "正在获取数据..." : bt() ? n = "专属签到位置" : (n = "不在签到区域，只能外场签到", c = "重新定位"), a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {className: "location-status"}, a.a.createElement("span", {className: "status"}, n), c && a.a.createElement("span", {
                     className: "reLoc",
                     onClick: ot
                 }, c)), bt() && !At() && K.current && (null === (e = K.current) || void 0 === e ? void 0 : e.length) > 1 && (et() ? a.a.createElement("div", {className: "bu-name"}, null === (t = q.current) || void 0 === t ? void 0 : t.sbuName, "场所") : a.a.createElement("div", {className: "bu-name"}, "多BU场所")), bt() && a.a.createElement("div", {
