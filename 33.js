@@ -255,7 +255,7 @@ var str = `
                             re.current = e, window.localStorage.setItem("device", JSON.stringify(e)), We()
                         }
                     })
-                }), !1), g.a.setTitle("场地签到"), g.a.setupRightMenuButton("规则说明", "#666", (function () {
+                }), !1), g.a.setTitle("专属签到"), g.a.setupRightMenuButton("规则说明", "#666", (function () {
                     return Object(c.b)(e, void 0, void 0, (function () {
                         var e;
                         return Object(c.d)(this, (function (t) {
@@ -885,7 +885,7 @@ var str = `
             })), a.a.createElement("div", {
                 className: At() ? "circle disable" : bt() ? "circle" : "circle outside",
                 onClick: N(Je, 500)
-            }, a.a.createElement("span", {className: "sign"}, At() ? "非签到时间" : bt() ? "场地签到" : "外场签到"), At() && a.a.createElement("div", {className: "clock"}, n.current.startTime.substring(0, 5), "~", n.current.endTime.substring(0, 5))), a.a.createElement("div", {className: "status-container"}, function () {
+            }, a.a.createElement("span", {className: "sign"}, At() ? "非签到时间" : bt() ? "专属签到位置" : "外场签到"), At() && a.a.createElement("div", {className: "clock"}, n.current.startTime.substring(0, 5), "~", n.current.endTime.substring(0, 5))), a.a.createElement("div", {className: "status-container"}, function () {
                 var e, t, n = "", c = null;
                 return At() ? n = "不在签到时间，无法签到" : ie ? n = "正在获取数据..." : bt() ? n = "专属签到位置" : (n = "不在签到区域，只能外场签到", c = "重新定位"), a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {className: "location-status"}, a.a.createElement("span", {className: "status"}, n), c && a.a.createElement("span", {
                     className: "reLoc",
