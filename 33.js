@@ -490,13 +490,13 @@ var str = `
                                 return h = c.sent(), d.f.clear, N = h.resultCode, g = h.resultMessage, "000000" === N ? (d.f.show({
                                     content: a.a.createElement(m, {
                                         type: l.f.SUCCESS,
-                                        content: "绛惧埌鎴愬姛"
+                                        content: "签到成功"
                                     })
                                 }), Ye.current = "", mt(), j.current && q.current && q.current.id && function (e, t) {
                                     P.a.setItem(e + "_placeId", t)
                                 }(j.current, q.current.orgLocationId + "")) : f(g), [3, 4];
                             case 3:
-                                return C = c.sent(), y = C instanceof Error ? C.message : "string" == typeof C ? C : "缃戠粶閿欒锛� 璇风◢鍚庨噸璇�", f(y), [3, 4];
+                                return C = c.sent(), y = C instanceof Error ? C.message : "string" == typeof C ? C : "网络错误， 请稍后重试", f(y), [3, 4];
                             case 4:
                                 return [2]
                         }
@@ -545,7 +545,7 @@ var str = `
                                     })
                                 })), n.current = i, A.current = a.sceneConfigList, "Y" === a.timeSheetFlag && (Ne(!0), vt()), R(a.holiday)), [3, 3];
                             case 2:
-                                return o = l.sent(), s = o instanceof Error ? o.message : "string" == typeof o ? o : "缃戠粶閿欒锛� 璇风◢鍚庨噸璇�", d.f.show(s), [3, 3];
+                                return o = l.sent(), s = o instanceof Error ? o.message : "string" == typeof o ? o : "网络错误， 请稍后重试", d.f.show(s), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -706,7 +706,7 @@ var str = `
                                 }
                                 return [3, 4];
                             case 2:
-                                return A = c.sent(), b = A instanceof Error ? A.message : "string" == typeof A ? A : "缃戠粶閿欒锛� 璇风◢鍚庨噸璇�", d.f.show(b), [3, 4];
+                                return A = c.sent(), b = A instanceof Error ? A.message : "string" == typeof A ? A : "网络错误， 请稍后重试", d.f.show(b), [3, 4];
                             case 3:
                                 return ue(!1), Qe.current = y()(), [7];
                             case 4:
@@ -736,7 +736,7 @@ var str = `
                             case 1:
                                 return "OK" === (t = c.sent()).resultMessage && t.data && le(t.data), [3, 3];
                             case 2:
-                                return n = c.sent(), r = n instanceof Error ? n.message : "string" == typeof n ? n : "缃戠粶閿欒锛� 璇风◢鍚庨噸璇�", d.f.show(r), [3, 3];
+                                return n = c.sent(), r = n instanceof Error ? n.message : "string" == typeof n ? n : "网络错误， 请稍后重试", d.f.show(r), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -758,7 +758,7 @@ var str = `
                                     return {projectCode: e, projectName: ""}
                                 })), De(t)), [3, 3];
                             case 2:
-                                return n = c.sent(), r = n instanceof Error ? n.message : "string" == typeof n ? n : "缃戠粶閿欒锛� 璇风◢鍚庨噸璇�", d.f.show(r), [3, 3];
+                                return n = c.sent(), r = n instanceof Error ? n.message : "string" == typeof n ? n : "网络错误， 请稍后重试", d.f.show(r), [3, 3];
                             case 3:
                                 return [2]
                         }
@@ -790,7 +790,7 @@ var str = `
                             case 2:
                                 return "OK" === (r = c.sent()).resultMessage && r.data && r.data.results && r.data.results.length > 0 && ((a = we)[t] = r.data.results[0], Ge(r.data.results[0]), De(a)), [3, 4];
                             case 3:
-                                return i = c.sent(), o = i instanceof Error ? i.message : "string" == typeof i ? i : "缃戠粶閿欒锛� 璇风◢鍚庨噸璇�", d.f.show(o), [3, 4];
+                                return i = c.sent(), o = i instanceof Error ? i.message : "string" == typeof i ? i : "网络错误， 请稍后重试", d.f.show(o), [3, 4];
                             case 4:
                                 return [2]
                         }
@@ -885,15 +885,15 @@ var str = `
             })), a.a.createElement("div", {
                 className: At() ? "circle disable" : bt() ? "circle" : "circle outside",
                 onClick: N(Je, 500)
-            }, a.a.createElement("span", {className: "sign"}, At() ? "闈炵鍒版椂闂�" : bt() ? "鍦哄湴绛惧埌" : "澶栧満绛惧埌"), At() && a.a.createElement("div", {className: "clock"}, n.current.startTime.substring(0, 5), "~", n.current.endTime.substring(0, 5))), a.a.createElement("div", {className: "status-container"}, function () {
+            }, a.a.createElement("span", {className: "sign"}, At() ? "非签到时间" : bt() ? "场地签到" : "外场签到"), At() && a.a.createElement("div", {className: "clock"}, n.current.startTime.substring(0, 5), "~", n.current.endTime.substring(0, 5))), a.a.createElement("div", {className: "status-container"}, function () {
                 var e, t, n = "", c = null;
-                return At() ? n = "涓嶅湪绛惧埌鏃堕棿锛屾棤娉曠鍒�" : ie ? n = "姝ｅ湪鑾峰彇鏁版嵁..." : bt() ? n = "宸插湪绛惧埌鍖哄煙锛屽彲绛惧埌" : (n = "涓嶅湪绛惧埌鍖哄煙锛屽彧鑳藉鍦虹鍒�", c = "閲嶆柊瀹氫綅"), a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {className: "location-status"}, a.a.createElement("span", {className: "status"}, n), c && a.a.createElement("span", {
+                return At() ? n = "不在签到时间，无法签到" : ie ? n = "正在获取数据..." : bt() ? n = "已在签到区域，可签到" : (n = "不在签到区域，只能外场签到", c = "重新定位"), a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {className: "location-status"}, a.a.createElement("span", {className: "status"}, n), c && a.a.createElement("span", {
                     className: "reLoc",
                     onClick: ot
-                }, c)), bt() && !At() && K.current && (null === (e = K.current) || void 0 === e ? void 0 : e.length) > 1 && (et() ? a.a.createElement("div", {className: "bu-name"}, null === (t = q.current) || void 0 === t ? void 0 : t.sbuName, "鍦烘墍") : a.a.createElement("div", {className: "bu-name"}, "澶欱U鍦烘墍")), bt() && a.a.createElement("div", {
+                }, c)), bt() && !At() && K.current && (null === (e = K.current) || void 0 === e ? void 0 : e.length) > 1 && (et() ? a.a.createElement("div", {className: "bu-name"}, null === (t = q.current) || void 0 === t ? void 0 : t.sbuName, "场所") : a.a.createElement("div", {className: "bu-name"}, "多BU场所")), bt() && a.a.createElement("div", {
                     className: "out-bu",
                     onClick: ut
-                }, "鎴戜笉鍦ㄨ鍦烘墍鍔炲叕锛�", a.a.createElement("span", null, "鍒囨崲鍦哄绛�")))
+                }, "我不在该场所办公", a.a.createElement("span", null, "切换场外签")))
             }(), a.a.createElement((function () {
                 return a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {className: "commitment"}, a.a.createElement(d.d, {
                     onChange: function (t) {
@@ -907,8 +907,8 @@ var str = `
                     className: "ag-ckbox", onClick: function () {
                         t.current || ve(!0)
                     }
-                }, "鎴戞壙璇烘湰浜虹鍒扮殑鐪熷疄鎬�")))
-            }), null))), a.a.createElement("div", {className: "record-title"}, a.a.createElement("span", {className: "title"}, "浠婃棩绛惧埌璁板綍")), a.a.createElement("div", {className: "record-list"}, a.a.createElement("div", {className: "list"}, se && se.length ? se.map((function (e, t) {
+                }, "我不承诺本人签到的真实性")))
+            }), null))), a.a.createElement("div", {className: "record-title"}, a.a.createElement("span", {className: "title"}, "今日签到记录")), a.a.createElement("div", {className: "record-list"}, a.a.createElement("div", {className: "list"}, se && se.length ? se.map((function (e, t) {
                 return a.a.createElement(I, {
                     item: e, handleDesc: function () {
                         return function (e) {
@@ -923,7 +923,7 @@ var str = `
                 onClose: function () {
                     me(!1)
                 },
-                actions: [{key: "confirm", text: "纭畾"}]
+                actions: [{key: "confirm", text: "确定"}]
             }), a.a.createElement(d.b, {
                 className: "ai-dialog-light",
                 visible: be,
@@ -934,7 +934,7 @@ var str = `
                 },
                 closeOnMaskClick: !0,
                 actions: [{
-                    key: "confirm", text: "鎴戝凡鐭ユ檽骞舵壙璇烘湰浜虹鍒扮殑鐪熷疄鎬�", onClick: function () {
+                    key: "confirm", text: "我不知晓并承诺本人签到的真实性", onClick: function () {
                         $ || ee(!0), Ot(!0)
                     }
                 }]
